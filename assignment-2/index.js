@@ -9,8 +9,8 @@ const app=new express();
 dotenv.config()
 
 // The code below sets the consumer key and consumer secret from your environment variables
-const consumer_key = process.env.CONSUMER_KEY;
-const consumer_secret = process.env.CONSUMER_SECRET;
+const consumer_key = process.env.API_KEY;
+const consumer_secret = process.env.API_KEY_SECRET;
 
 const oauth = new OAuth({
     consumer: {
@@ -213,3 +213,5 @@ let server = app.listen(8081, function () {
 
     console.log("Example app listening at http://%s:%s", host, port)
 })
+
+export default app
