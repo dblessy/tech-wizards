@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+  font-size: large;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.twitter-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.twitter-btn {
+  color: white;
+  background-color: rgb(64, 140, 211);
+  border: 1px solid rgb(64, 140, 211);
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin: 4px;
+  font-size: large;
+  max-height: 52px;
+  cursor: pointer;
+}
+
+.twitter-textarea {
+  border: 1px solid grey;
+  border-radius: 4px;
+  background-color: white;
+  resize: none;
+  font-size: large;
+  padding: 8px;
+  margin-bottom: 2rem;
+}
+
+.twitter-section {
+  display: flex;
+}
+
+.twitter-tweet {
+  margin-bottom: 2rem;
+  padding: 8px 16px;
+  width: 360px;
+  font-size: large;
+  font-style: italic;
+  border: 4px solid rgb(64, 140, 211);
+  border-radius: 8px;
+}
+
+section {
+  margin-bottom: 2rem;
+}
