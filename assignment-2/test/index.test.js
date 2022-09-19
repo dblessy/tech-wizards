@@ -15,36 +15,38 @@ describe('/GET tweets', () => {
       chai.request(index)
           .get('/RecentTweets/'+id)
           .end((err, res) => {
+                res.should.have.property("text");
                 res.should.have.status(200);
             done();
           });
     });
 });
 
-/*
- * @author: Aishwarya Lodhi
- */
+// /*
+//  * @author: Aishwarya Lodhi
+//  */
 describe('/POST tweet', () => {
     it('it should POST a tweet', (done) => {
-        let data = { "text" : "yuwjwi"}
+        let data = { "text" : "it's a rainy day!!"}
       chai.request(index)
           .post('/Tweet')
           .send(data)
           .end((err, res) => {
                 res.should.have.status(200);
+                res.body.data.should.have.property('id');
+                res.body.data.should.have.property('text');
                 done();
-                // console.log(res.body);
           });
 
     });
 })
 
-/*
- * @author: Aishwarya Lodhi
- */
+// /*
+//  * @author: Aishwarya Lodhi
+//  */
 describe('/DELETE tweet', () => {
     it('it should DELETE a tweet of given id', (done) => {
-        let id = "1570878529105174533"
+        let id = "1571673508979290114"
         chai.request(index)
           .delete('/Tweet/' + id)
           .end((err, res) => {
